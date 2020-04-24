@@ -1,1 +1,120 @@
-p Контент
+.content
+    .cloud
+    .cloud-2
+    .content__inner
+        .content__item
+            .logo.txt-shadow Web Mentor
+            h1.title.txt-shadow Обучение верстке сайтов
+            ul.technology-list.txt-shadow 
+                li HTML5 /
+                li CSS3 /
+                li JavaScript / 
+                li jQuery 
+
+            .mentor
+                ul.social-list
+                    li
+                        a(href="#") 
+                            img(src="img/vk.png")
+                    li
+                        a(href="#") 
+                            img(src="img/inst.png")
+                    li
+                        a(href="#") 
+                            img(src="img/telegram.png")
+                                
+                .mentor__photo
+                .mentor__name.txt-shadow Аслан Березгов    
+                .mentor__article.txt-shadow 
+                    p Frontend разработчик
+                    p Персональный ментор
+                .link-block
+                    a(href="http://webdevfactory.ru/portfolio.php" target="_blank").btn.btn_portfolio Мои работы
+             
+
+        .content__item.txt-shadow
+            ul.tab-list
+                li
+                    button(type="button" tabLink="#tabVideo").tab-list__btn.btn.txt-shadow.is-active  Видео
+                li
+                    button(type="button" tabLink="#tabPlan").tab-list__btn.btn.txt-shadow  Обучение
+                li
+                    button(type="button" tabLink="#tabPayment").tab-list__btn.btn.txt-shadow  Стоимость
+                li
+                    button(type="button" tabLink="#tabContact").tab-list__btn.btn.txt-shadow  Контакты
+            .tab-block
+                .tab-content#tabVideo        
+                    p.tab-title Презентация курса  
+                    <video class="video" controls>
+                        <source src="video/vidos.mp4" type="video/mp4">
+                        <source src="video/vidos.webm" type="video/webm">
+                        <source src="video/vidos.ogv" type="video/ogg">
+                        <object data="video/vidos.swf" type="application/x-shockwave-flash">
+                            <param name="movie" value="video/vidos.swf">
+                        </object>
+                    </video>
+                    p.about-mentor Кто такой 
+                        span.wheat Ментор 
+                        |- персональный 
+                        span.wheat наставник
+                        |, который знает твою цель, как её достичь, что для этого нужно делать и каких ошибок на пути можно избежать. Он подсказывает тебе, что и в каком порядке учить; проверяет, правильно ли ты всё делаешь; тыкает в тебя мотивационной палочкой. Это и есть 
+                        span.wheat Ментор 
+                
+                .tab-content#tabPlan
+                    p.tab-title План обучения
+                    ul.tutotial-plan
+                        li Даю ссылки на теоретический материал, который вам нужно изучить
+                        li Получайте макет, приступаем к практике
+                        li Поэтапное погружение. Не делаем все сразу, выдаю домашние задания, что конкретно нужно сделать на данном этапе.
+                        li Проверка заданий, код ревью, указываю на ошибки, работаем над качеством кода
+                        li Ответы на вопросы, текстовые консультации неограничено
+                        li Скайп консультация, разбор сложных вопросов раз в неделю по необходимости
+                    
+                    p.tab-title.tab-title_inner Первый уровень  
+                    ul.tutotial-plan
+                        li Первый уровень - десктопная верстка для начинающих. Для тех, кто только начал интересоваться веб технологиями. 
+                        li Верстаем исключительно десктопную версию, интерактивные элементы разбираем в малой степени. Учимся находить и использовать готовые решения
+                        
+                    p.tab-title.tab-title_inner Второй уровень      
+                    ul.tutotial-plan
+                        li Второй уровень - адаптивная верстка. Для тех кто уже знаком с веб технологиями и имеет какой либо опыт в верстке. Работаем над более сложным макетом, учимся верстать адаптивно, кроссбраузерно. 
+                        li Разбираем и внедряем в работу интерактивные элементы на JavaScript, jQuery (табы, аккордеоны, слайдеры, выпадающие списки). Учимся кастомизировать готовые решения, дорабатывать код под наши задачи   
+                
+                .tab-content#tabPayment
+                    p.tab-title Как происходит оплата
+                    ul.tutotial-plan
+                        li Первая вводная неделя 
+                            span.wheat БЕСПЛАТНО
+                        li Изучайте теоретический материал, я консультирую и отвечаю на ваши вопросы, объясняю если, что то не понятно
+                        li Если решите, что такой формат обучения вам подходит и вас все устраивает, договариваемся об оплате
+                        li Оплата поэтапная, неделя менторского сопровождения 1000 руб. Вы оплачивайте неделю обучения и мы занимаемся согласно плана
+                        li Далее если захотите продолжить оплачивайте следующую неделю, обучение можно прервать в любой момент
+                        li Итого стоимость месяца менторского сопровождения 4000 руб. Если оплачивается сразу за весь месяц, стоимость обучения 3000 руб. 
+                    
+                    p.tab-title.tab-title_inner Возврат средств
+                    ul.tutotial-plan
+                        li Вы можете вернуть средства за текущую неделю обучения. То есть, если вы оплатили неделю, но по каким то причинам не можете продолжить обучение, я возвращаю вам оплату
+                        
+                .tab-content#tabContact
+                    p.tab-title Контакты
+                    p.tab-conten__article Вы можете связаться со мной по любым из указанных контактов. Быстрее всего реагирую в телеграме, так как по работе я всегда там. Для быстрого ответа пишите в телеграм 
+                    
+                    ul.tutotial-plan.tutotial-plan_contact
+                        li 
+                            a(href="#").telegram @AmraSK
+                        li 
+                            a(href="https://vk.com/aslanberezgov").vkontakte vk.com/aslanberezgov
+                        li 
+                            a(href="#").email amra_sk@mail.ru
+                    
+                    p.tab-conten__article С дополнительной информацией можете ознакомиться на моем сайте портфолио 
+                        a(href="http://webdevfactory.ru/").wheat webdevfactory.ru  
+                        
+    p.about-post.txt-shadow 
+        a(href="#") Статья 
+        |о том 
+        a(href="#") как я учил JavaScript 
+        |и разработал 
+        a(href='#') визуальную новеллу 
+        
+                         
