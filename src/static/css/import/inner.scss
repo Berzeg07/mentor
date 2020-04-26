@@ -10,7 +10,7 @@ body {
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 40px 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,6 +18,9 @@ body {
     position: relative;
     overflow: hidden;
     flex-wrap: wrap;
+    @media(min-width: 992px) {
+        padding: 40px 15px 10px;
+    }
 }
 
 .wheat {
@@ -30,6 +33,10 @@ body {
     position: relative;
     z-index: 20;
     font-size: 18px;
+    padding: 35px 0;
+    @media(min-width: 992px) {
+        padding: 0;
+    }
 
     a {
         color: wheat;
@@ -37,10 +44,12 @@ body {
 }
 
 .content__item {
-    width: 48%;
     text-align: center;
     position: relative;
     z-index: 20;
+    @media(min-width: 992px) {
+        width: 48%;
+    }
 }
 
 .technology-list {
@@ -48,6 +57,9 @@ body {
     justify-content: center;
     font-size: 24px;
     margin-bottom: 32px;
+    @media(max-width: 767px) {
+        font-size: 17px;
+    }
 
     li {
         &:not(:last-child) {
@@ -87,14 +99,30 @@ body {
 
 .tab-list {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 45px;
-    border-bottom: 1px solid white;
+    @media(max-width: 767px) {
+        padding-top: 35px;
+        margin-bottom: 20px;
+        border-top: 1px solid white;
+
+        li {
+            width: 50%;
+        }
+    }
+    @media(min-width: 768px) {
+        margin-bottom: 20px;
+        border-bottom: 1px solid white;
+    }
 
     .btn {
         width: 120px;
         padding: 10px 0;
         border: none;
         opacity: 0.6;
+        @media(max-width: 1279px) {
+            width: 114px;
+        }
 
         &:hover {
             opacity: 1;
@@ -102,11 +130,18 @@ body {
     }
 
     .btn.is-active {
-        border-radius: 0 10px 0 0;
-        border-left: 1px solid white;
-        border-top: 1px solid white;
-        border-right: 1px solid white;
-        opacity: 1;
+        @media(max-width: 767px) {
+            opacity: 1;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+        @media(min-width: 768px) {
+            border-radius: 0 10px 0 0;
+            border-left: 1px solid white;
+            border-top: 1px solid white;
+            border-right: 1px solid white;
+            opacity: 1;
+        }
     }
 }
 
@@ -135,6 +170,9 @@ body {
 .logo {
     font-size: 50px;
     font-weight: 600;
+    @media(max-width: 767px) {
+        font-size: 40px;
+    }
 }
 
 .title {
@@ -142,10 +180,17 @@ body {
     font-weight: 400;
     font-size: 42px;
     padding: 10px 0 14px;
+    @media(max-width: 767px) {
+        font-size: 24px;
+    }
+    @media(min-width: 768px) and (max-width: 1099px) {
+        font-size: 36px;
+    }
 }
 
 .mentor {
     position: relative;
+    padding-bottom: 50px;
 }
 
 .mentor__photo {
@@ -153,9 +198,37 @@ body {
     height: 300px;
     margin: 25px auto;
     border-radius: 10em;
-    overflow: hidden;
     background: url("../img/mentor.jpg") no-repeat center;
     background-size: cover;
+    position: relative;
+    @media(max-width: 767px) {
+        width: 220px;
+        height: 220px;
+        margin: 25px auto 65px;
+    }
+}
+
+.action-block {
+    background: red;
+    border-radius: 24px;
+    padding: 7px 10px;
+    font-size: 24px;
+    position: absolute;
+    top: 12px;
+    right: 0;
+    @media(max-width: 767px) {
+        margin: 15px 0;
+        position: static;
+        display: inline-block;
+    }
+
+    b {
+        color: yellow;
+    }
+
+    span {
+        color: white;
+    }
 }
 
 .about-mentor {
@@ -165,17 +238,30 @@ body {
 
 .social-list {
     position: absolute;
-    left: 50px;
-    top: 60px;
 
     li {
         margin-bottom: 15px;
+        @media(max-width: 767px) {
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
     }
 
     a {
         display: inline-block;
         width: 40px;
         opacity: 0.7;
+    }
+    @media(max-width: 767px) {
+        display: flex;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -74px;
+    }
+    @media(min-width: 768px) {
+        left: -56px;
+        top: 60px;
     }
 }
 
@@ -219,8 +305,11 @@ body {
 
 .tab-title {
     font-size: 28px;
-    margin-bottom: 25px;
+    margin-bottom: 17px;
     color: wheat;
+    @media(max-width: 767px) {
+        margin-bottom: 10px;
+    }
 }
 
 .tab-title_inner {
@@ -230,9 +319,33 @@ body {
 .content__inner {
     max-width: 1100px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    position: relative;
+    @media(min-width: 992px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .content__item {
+        &:last-child {
+            @media(min-width: 992px) {
+                position: absolute;
+                right: 0;
+                top: 14px;
+            }
+            @media(min-width: 1280px) {
+                top: 60px;
+            }
+            @media(min-width: 1900px) {
+                top: 114px;
+            }
+        }
+    }
+    @media(min-width: 1600px) {
+        padding-top: 18px;
+    }
+    @media(min-width: 1900px) {
+        padding-top: 70px;
+    }
 }
 
 .tab-content {
@@ -271,7 +384,7 @@ body {
 
 .email {
     &:after {
-        background: url("../img/vk.png") no-repeat center;
+        background: url("../img/email.png") no-repeat center;
         background-size: contain;
     }
 }
@@ -317,17 +430,18 @@ body {
 .blog-page {
     max-width: 1024px;
     width: 100%;
-    margin: 0px auto 70px;
+    margin: 0 auto 70px;
     color: black;
     position: relative;
     z-index: 20;
     padding-top: 100px;
-    @media(max-width: 767px){
+    @media(max-width: 767px) {
         padding-top: 220px;
     }
 
     .photo {
         position: absolute;
+        display: inline-block;
         right: 50px;
         top: 15px;
         border-radius: 10em;
@@ -335,7 +449,7 @@ body {
         height: 220px;
         background: url("../img/motocros.jpg") no-repeat top left -30px;
         background-size: cover;
-        @media(max-width: 767px){
+        @media(max-width: 767px) {
             width: 180px;
             height: 180px;
             left: 50%;
@@ -383,7 +497,7 @@ body {
     font-size: 42px;
     font-weight: 400;
     padding-left: 15px;
-    @media(max-width: 767px){
+    @media(max-width: 767px) {
         font-size: 30px;
     }
 }
@@ -393,16 +507,16 @@ body {
     color: wheat;
     font-size: 26px;
     margin-bottom: 35px;
-    @media(max-width: 767px){
+    @media(max-width: 767px) {
         font-size: 18px;
     }
 }
 
-.content-title{
+.content-title {
     color: #670303;
     font-size: 24px;
     padding-top: 20px;
-    @media(max-width: 767px){
+    @media(max-width: 767px) {
         font-size: 22px;
     }
 }
@@ -411,11 +525,12 @@ body {
     padding: 15px 15px 25px;
     background: white;
 
-    a{
+    a {
         color: #670303;
         text-decoration: underline;
         font-size: 18px;
-        &:hover{
+
+        &:hover {
             text-decoration: none;
         }
     }
@@ -425,45 +540,47 @@ body {
     }
 }
 
-.blog-img{
+.blog-img {
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
     padding: 20px 20px 15px;
     background: #E4E4E4;
     margin-bottom: 15px;
-    @media(max-width: 767px){
+    @media(max-width: 767px) {
         padding: 10px 10px 15px;
     }
 }
 
-.blog-img__article{
+.blog-img__article {
     text-align: center;
     color: #670303;
     padding-top: 8px;
     font-style: italic;
-    @media(max-width: 767px){
+    @media(max-width: 767px) {
         font-size: 14px;
     }
 }
 
-.blog-contact{
-    border-top:1px solid #E4E4E4;
+.blog-contact {
+    border-top: 1px solid #E4E4E4;
     margin-top: 10px;
 }
 
-.main-link{
+.main-link {
     text-align: right;
-    @media(max-width: 767px){
+    @media(max-width: 767px) {
         text-align: center;
-        padding: 10px 0px;
+        padding: 10px 0;
     }
-    a{
+
+    a {
         position: relative;
         display: inline-block;
         text-decoration: none;
         padding-left: 27px;
-        &:after{
+
+        &:after {
             content: '';
             position: absolute;
             width: 20px;
@@ -471,26 +588,27 @@ body {
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            background: url('../img/arrow-back.png') no-repeat center;
+            background: url("../img/arrow-back.png") no-repeat center;
             background-size: contain;
         }
     }
 }
 
-.blog-contact{
-    .content-title{
+.blog-contact {
+    .content-title {
         font-size: 20px;
         padding-bottom: 10px;
     }
 }
 
-.contact-list{
-    a{
+.contact-list {
+    a {
         display: inline-block;
         position: relative;
         text-decoration: none;
         padding-left: 30px;
-        &:after{
+
+        &:after {
             content: '';
             position: absolute;
             left: 0;
@@ -501,25 +619,44 @@ body {
             background-size: contain;
         }
     }
-    li{
+
+    li {
         margin-bottom: 20px;
     }
 }
 
-.contact-list__tel{
-    &:after{
-        background: url('../img/tel-black.png') no-repeat center;
+.contact-list__tel {
+    &:after {
+        background: url("../img/tel-black.png") no-repeat center;
     }
 }
 
-.contact-list__vk{
-    &:after{
-        background: url('../img/vk-black.png') no-repeat center;
+.contact-list__vk {
+    &:after {
+        background: url("../img/vk-black.png") no-repeat center;
     }
 }
 
-.contact-list__email{
-    &:after{
-        background: url('../img/email-black.png') no-repeat center;
+.contact-list__email {
+    &:after {
+        background: url("../img/email-black.png") no-repeat center;
+    }
+}
+
+.tab-title_action {
+    color: yellow;
+    position: relative;
+    border-top: 1px solid white;
+    padding-top: 18px;
+}
+
+.tutotial-plan_action {
+    font-size: 18px;
+    border-bottom: 1px solid white;
+    padding-bottom: 16px;
+
+    b {
+        color: yellow;
+        font-size: 22px;
     }
 }

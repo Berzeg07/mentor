@@ -12,25 +12,25 @@
                 li jQuery 
 
             .mentor
-                ul.social-list
-                    li
-                        a(href="#") 
-                            img(src="img/vk.png")
-                    li
-                        a(href="#") 
-                            img(src="img/inst.png")
-                    li
-                        a(href="#") 
-                            img(src="img/telegram.png")
-                                
                 .mentor__photo
+                    ul.social-list
+                        li
+                            a(href="https://vk.com/aslanberezgov" target="_blank") 
+                                img(src="img/vk.png")
+                        li
+                            a(href="mailto:amra_sk@mail.ru") 
+                                img(src="img/email.png")
+                        li
+                            a(href="tg://resolve?domain=AmraSK") 
+                                img(src="img/telegram.png")
+                        
                 .mentor__name.txt-shadow Аслан Березгов    
                 .mentor__article.txt-shadow 
                     p Frontend разработчик
                     p Персональный ментор
                 .link-block
-                    a(href="http://webdevfactory.ru/portfolio.php" target="_blank").btn.btn_portfolio Мои работы
-             
+                    a(href="http://webdevfactory.ru/portfolio.php" target="_blank").btn.btn_portfolio.txt-shadow  Мои работы
+
 
         .content__item.txt-shadow
             ul.tab-list
@@ -59,7 +59,7 @@
                         span.wheat наставник
                         |, который знает твою цель, как её достичь, что для этого нужно делать и каких ошибок на пути можно избежать. Он подсказывает тебе, что и в каком порядке учить; проверяет, правильно ли ты всё делаешь; тыкает в тебя мотивационной палочкой. Это и есть 
                         span.wheat Ментор 
-                
+
                 .tab-content#tabPlan
                     p.tab-title План обучения
                     ul.tutotial-plan
@@ -67,19 +67,17 @@
                         li Получайте макет, приступаем к практике
                         li Поэтапное погружение. Не делаем все сразу, выдаю домашние задания, что конкретно нужно сделать на данном этапе.
                         li Проверка заданий, код ревью, указываю на ошибки, работаем над качеством кода
-                        li Ответы на вопросы, текстовые консультации неограничено
-                        li Скайп консультация, разбор сложных вопросов раз в неделю по необходимости
-                    
+
                     p.tab-title.tab-title_inner Первый уровень  
                     ul.tutotial-plan
                         li Первый уровень - десктопная верстка для начинающих. Для тех, кто только начал интересоваться веб технологиями. 
                         li Верстаем исключительно десктопную версию, интерактивные элементы разбираем в малой степени. Учимся находить и использовать готовые решения
-                        
+
                     p.tab-title.tab-title_inner Второй уровень      
                     ul.tutotial-plan
                         li Второй уровень - адаптивная верстка. Для тех кто уже знаком с веб технологиями и имеет какой либо опыт в верстке. Работаем над более сложным макетом, учимся верстать адаптивно, кроссбраузерно. 
                         li Разбираем и внедряем в работу интерактивные элементы на JavaScript, jQuery (табы, аккордеоны, слайдеры, выпадающие списки). Учимся кастомизировать готовые решения, дорабатывать код под наши задачи   
-                
+
                 .tab-content#tabPayment
                     p.tab-title Как происходит оплата
                     ul.tutotial-plan
@@ -90,31 +88,50 @@
                         li Оплата поэтапная, неделя менторского сопровождения 1000 руб. Вы оплачивайте неделю обучения и мы занимаемся согласно плана
                         li Далее если захотите продолжить оплачивайте следующую неделю, обучение можно прервать в любой момент
                         li Итого стоимость месяца менторского сопровождения 4000 руб. Если оплачивается сразу за весь месяц, стоимость обучения 3000 руб. 
-                    
+
+                    .tab-title.tab-title_action 
+                        |Скидки и акции    
+                        .action-block
+                            span Акция | 
+                            b -30%
+                                
+                    ul.tutotial-plan.tutotial-plan_action
+                        li Пока висит бейджик 
+                            span.wheat акции 
+                            |действует 
+                            span.wheat постоянная скидка 
+                            |на стоимость обучения
+                        li На текущее время стоимость недели обучения 
+                            |составляет 
+                            b 700 руб.
+
                     p.tab-title.tab-title_inner Возврат средств
                     ul.tutotial-plan
-                        li Вы можете вернуть средства за текущую неделю обучения. То есть, если вы оплатили неделю, но по каким то причинам не можете продолжить обучение, я возвращаю вам оплату
-                        
+                        li Вы можете 
+                            span.wheat вернуть средства 
+                            |за текущую неделю обучения. То есть, если вы оплатили неделю, но по каким то причинам не можете продолжить обучение, я 
+                            span.wheat возвращаю 
+                            |вам 
+                            span.wheat оплату
+
                 .tab-content#tabContact
                     p.tab-title Контакты
                     p.tab-conten__article Вы можете связаться со мной по любым из указанных контактов. Быстрее всего реагирую в телеграме, так как по работе я всегда там. Для быстрого ответа пишите в телеграм 
-                    
+
                     ul.tutotial-plan.tutotial-plan_contact
                         li 
-                            a(href="#").telegram @AmraSK
+                            a(href="tg://resolve?domain=AmraSK").telegram @AmraSK
                         li 
-                            a(href="https://vk.com/aslanberezgov").vkontakte vk.com/aslanberezgov
+                            a(href="https://vk.com/aslanberezgov" target="_blank").vkontakte vk.com/aslanberezgov
                         li 
-                            a(href="#").email amra_sk@mail.ru
-                    
+                            a(href="mailto:amra_sk@mail.ru").email amra_sk@mail.ru
+
                     p.tab-conten__article С дополнительной информацией можете ознакомиться на моем сайте портфолио 
-                        a(href="http://webdevfactory.ru/").wheat webdevfactory.ru  
-                        
+                        a(href="http://webdevfactory.ru/" target="_blank").wheat webdevfactory.ru  
+
     p.about-post.txt-shadow 
-        a(href="#") Статья 
+        a(href="blog.html" target="_blank") Статья 
         |о том 
-        a(href="#") как я учил JavaScript 
+        a(href="blog.html" target="_blank") как я учил JavaScript 
         |и разработал 
-        a(href='#') визуальную новеллу 
-        
-                         
+        a(href='https://berzeg07.github.io/warmaster/' target="_blank") визуальную новеллу 

@@ -8,5 +8,5 @@ $(document).ready(function() {
         });
         $(tab).fadeIn(400);
     });
-    $('.tab-list .tab-list__btn:last').click();
+    $('.tab-list .tab-list__btn:first').click();
 });
