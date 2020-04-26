@@ -3,6 +3,7 @@ body {
     background-size: cover;
     font-family: 'Play', sans-serif;
     color: white;
+    background-attachment: fixed;
 }
 
 .content {
@@ -310,5 +311,215 @@ body {
             height: 28px;
             opacity: 0.7;
         }
+    }
+}
+
+.blog-page {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0px auto 70px;
+    color: black;
+    position: relative;
+    z-index: 20;
+    padding-top: 100px;
+    @media(max-width: 767px){
+        padding-top: 220px;
+    }
+
+    .photo {
+        position: absolute;
+        right: 50px;
+        top: 15px;
+        border-radius: 10em;
+        width: 220px;
+        height: 220px;
+        background: url("../img/motocros.jpg") no-repeat top left -30px;
+        background-size: cover;
+        @media(max-width: 767px){
+            width: 180px;
+            height: 180px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.breadcrumbs {
+    color: white;
+    margin-bottom: 25px;
+    position: relative;
+
+    a {
+        display: inline-block;
+        padding-left: 44px;
+        padding-right: 15px;
+        margin-right: 8px;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: -3px;
+            width: 20px;
+            height: 20px;
+            background: url("../img/main-icon.png") no-repeat center;
+            background-size: contain;
+        }
+
+        &:after {
+            content: '/';
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 16px;
+        }
+    }
+}
+
+.blog-title {
+    color: wheat;
+    margin-bottom: 10px;
+    font-size: 42px;
+    font-weight: 400;
+    padding-left: 15px;
+    @media(max-width: 767px){
+        font-size: 30px;
+    }
+}
+
+.blog-article {
+    padding-left: 15px;
+    color: wheat;
+    font-size: 26px;
+    margin-bottom: 35px;
+    @media(max-width: 767px){
+        font-size: 18px;
+    }
+}
+
+.content-title{
+    color: #670303;
+    font-size: 24px;
+    padding-top: 20px;
+    @media(max-width: 767px){
+        font-size: 22px;
+    }
+}
+
+.blog-page__content {
+    padding: 15px 15px 25px;
+    background: white;
+
+    a{
+        color: #670303;
+        text-decoration: underline;
+        font-size: 18px;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+}
+
+.blog-img{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 20px 15px;
+    background: #E4E4E4;
+    margin-bottom: 15px;
+    @media(max-width: 767px){
+        padding: 10px 10px 15px;
+    }
+}
+
+.blog-img__article{
+    text-align: center;
+    color: #670303;
+    padding-top: 8px;
+    font-style: italic;
+    @media(max-width: 767px){
+        font-size: 14px;
+    }
+}
+
+.blog-contact{
+    border-top:1px solid #E4E4E4;
+    margin-top: 10px;
+}
+
+.main-link{
+    text-align: right;
+    @media(max-width: 767px){
+        text-align: center;
+        padding: 10px 0px;
+    }
+    a{
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        padding-left: 27px;
+        &:after{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url('../img/arrow-back.png') no-repeat center;
+            background-size: contain;
+        }
+    }
+}
+
+.blog-contact{
+    .content-title{
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+}
+
+.contact-list{
+    a{
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        padding-left: 30px;
+        &:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 25px;
+            height: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-size: contain;
+        }
+    }
+    li{
+        margin-bottom: 20px;
+    }
+}
+
+.contact-list__tel{
+    &:after{
+        background: url('../img/tel-black.png') no-repeat center;
+    }
+}
+
+.contact-list__vk{
+    &:after{
+        background: url('../img/vk-black.png') no-repeat center;
+    }
+}
+
+.contact-list__email{
+    &:after{
+        background: url('../img/email-black.png') no-repeat center;
     }
 }
